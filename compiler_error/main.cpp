@@ -38,13 +38,14 @@ class CErrorTest
 {
 public:
   void GetPublicKey() {
+    // Internal compiler error on the following line
     auto* impl = new BotanBackend::PubKeyImpl{ Botan::ECDSA_PublicKey(myImpl->myPrvKey.algorithm_identifier(), myImpl->myPrvKey.public_key_bits()) };
   }
 
   std::shared_ptr< BotanBackend::PrvKeyImpl> myImpl;
 };
 
-int main(int argc, char* argc[])
+int main(int argc, char* argv[])
 {
 
 }
